@@ -1,0 +1,203 @@
+/* client/pages/detail/detail.wxss */
+
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40rpx 0 40rpx;
+  height: 350rpx;
+  background: #338ffc;
+  overflow: hidden;
+}
+
+.header .book-img {
+  width: 240rpx;
+  /*margin-left: 50rpx;*//*height: 150rpx;*/
+  box-shadow: 0 0 20rpx #777;
+}
+
+.header .book-infos {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 380rpx;
+}
+
+.header .book-infos .name {
+  width: 380rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.header .book-infos .item {
+  font-size: 24rpx;
+  padding-top: 5rpx;
+}
+
+.btns {
+  position: absolute;
+  bottom: 30rpx;
+  background-color: #fff;
+}
+
+.collect-btn {
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 450rpx;
+  right: 40rpx;
+}
+
+.borrow-btn {
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 450rpx;
+  right: 120rpx;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  border-bottom: solid 1rpx #ddd;
+}
+
+.tab .item {
+  line-height: 80rpx;
+  min-width: 140rpx;
+  text-align: center;
+}
+
+.tab .cur {
+  border-bottom: solid 5rpx #338ffc;
+  color: #338ffc;
+}
+
+.inner {
+  padding: 40rpx 40rpx;
+  font-size: 28rpx;
+}
+
+.inner .label {
+  font-weight: bold;
+  margin: 10rpx 0;
+  color: #555;
+}
+
+.lib-info {
+  color: #777;
+}
+
+.num, .lib {
+  display: flex;
+  padding: 10rpx 20rpx 10rpx 0rpx;
+}
+
+.lib-item {
+  width: 22rpx;
+  height: 22rpx;
+  background: #ccc;
+  margin: auto 0 auto 20rpx;
+  border-radius: 50%;
+}
+
+.lib .available {
+  background: #fdcc40;
+}
+
+.intro {
+  padding: 10rpx 20rpx 10rpx 0;
+  color: #777;
+  display: block;
+  width: 100%;
+}
+
+.doing {
+  color: #b2b2b2;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+}
+
+.logout-btn {
+  border: 1rpx solid #fff;
+  color: #fff;
+  height: 100rpx;
+  width: 150rpx;
+  padding: 0 20rpx;
+  line-height: 100rpx;
+  margin: 60rpx 0 0 60rpx;
+}
+
+.modal-dialog{
+  height: 100%;
+}
+/* 遮罩层 确认框层*/
+.modal-cover{
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.modal-confirm{
+  width: 540rpx;
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  margin: 0 105rpx;
+  background: white;
+  border-radius: 0rpx;
+  z-index: 199;
+}
+/* 弹框内部结构 */
+.modal-conent{
+  text-align: center;
+  padding: 30rpx 0;
+  color: #A1A1A1;
+}
+.modal-bottom{
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 20rpx; */
+  position: relative;
+  border-top: 1rpx solid #D4D5D7;
+}
+.modal-bottom view{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  width: 50%;
+  text-align: center;
+}
+.modal-bottom button{
+  width: 265rpx;
+  color: #21B922;
+  line-height: 100rpx;
+  background: white;
+}
+.modal-text1{
+  color: black;
+  border-right: 1rpx solid #D4D5D7;
+}
+.modal-text2{
+  color: #21B922;
+}
+.modal-conent-text1{
+  font-weight: 600;
+  color: black;
+  margin:20rpx;
+}
+.modal-conent-text2{
+  color: red;
+  margin: 10rpx;
+}

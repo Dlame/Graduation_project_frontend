@@ -1,0 +1,65 @@
+<view class="header">
+  <image mode="widthFix" class="book-img" src="{{image}}"></image>
+  <view class="book-infos">
+    <view class="name">{{name}}</view>
+    <text class="item">作者：{{author}}</text>
+    <text class="item">出版社：{{publisher}}</text>
+    <text class="item">ISBN：{{ISBN}}</text>
+  </view>
+</view>
+<view class="tab">
+  <block>
+    <view class="item {{current==0?'cur':''}}" data-current="0" bindtap="changeSwiperPage">详情</view>
+    <view class="item {{current==1?'cur':''}}" data-current="1" bindtap="changeSwiperPage">评论</view>
+  </block>
+</view>
+<view class="inner" wx:if="{{current==0}}">
+  <block wx:if="{{token}}">
+    <image wx:if="{{isBorrow==0}}" class="borrow-btn" bindtap="showDialog" src='../../images/icon/icon-borrow.png'></image>
+    <image wx:else class="borrow-btn" bindtap="backBook" src='../../images/icon/icon-back.png'></image>
+    <block wx:if="{{isCollect==1}}">
+      <image bindtap="cancelCollect" class="collect-btn" mode="aspectFit" src="../../images/icon/icon-love-cur.png"></image>
+    </block>
+    <block wx:else>
+      <image bindtap="collectBook" class="collect-btn" mode="aspectFit" src="../../images/icon/icon-love.png"></image>
+    </block>
+  </block>
+
+  <view class="label">馆藏情况:</view>
+  <view class="lib-info">
+    <view class="num">
+      <view>索书号：</view>
+      <text>{{callNumber}}</text>
+    </view>
+    <view class="lib">
+      <view>图书馆馆藏：共{{collect}}本 可借{{available}}本 </view>
+      <!--<view class="lib-item available"></view>
+            <view class="lib-item available"></view>
+            <view class="lib-item"></view>
+            <view class="lib-item"></view>-->
+    </view>
+  </view>
+  <view class="label">简介:</view>
+  <view class='intro' style='white-space: normal;'>
+    <!-- <text> {{intro}}</text> -->
+    {{intro}}
+  </view>
+</view>
+<view wx:if="{{current==1}}">
+  coming soon
+</view>
+
+<view class='modal-dialog' wx:if="{{showModal}}">
+  <view class='modal-cover' bindtap="removeDialog"></view>
+  <view class='modal-confirm'>
+    <view class='modal-conent'>
+      <view class='modal-conent-text1'>借书信息</view>
+      <view class='modal-conent-text2'>书名：{{name}}</view>
+      <view class='modal-conent-text3'>借书时长：{{borrowTime}}</view>
+    </view>
+    <view class='modal-bottom'>
+      <view class='modal-text1' bindtap='chooseTime'>重新选择时长</view>
+      <view class='modal-text2' bindtap='borrowBook'>确认</view>
+    </view>
+  </view>
+</view>

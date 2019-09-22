@@ -1,0 +1,70 @@
+/* component/dialog.wxss */
+page{
+  height: 100%;
+}
+.modal-dialog{
+  height: 100%;
+}
+/* 遮罩层 确认框层*/
+.modal-cover{
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.3;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.modal-confirm{
+  width: 540rpx;
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  margin: 0 105rpx;
+  background: white;
+  border-radius: 0rpx;
+  z-index: 199;
+}
+/* 弹框内部结构 */
+.modal-conent{
+  text-align: center;
+  padding: 30rpx 0;
+  color: #A1A1A1;
+}
+.modal-bottom{
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 20rpx; */
+  position: relative;
+  border-top: 1rpx solid #D4D5D7;
+}
+.modal-bottom view{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  width: 50%;
+  text-align: center;
+}
+.modal-bottom button{
+  width: 265rpx;
+  color: #21B922;
+  line-height: 100rpx;
+  background: white;
+}
+.modal-text1{
+  color: black;
+  border-right: 1rpx solid #D4D5D7;
+}
+.modal-text2{
+  color: #21B922;
+}
+.modal-conent-text1{
+  font-weight: 600;
+  color: black;
+  margin:20rpx;
+}
+.modal-conent-text2{
+  color: red;
+  margin: 10rpx;
+}
+.modal-conent-text3{}

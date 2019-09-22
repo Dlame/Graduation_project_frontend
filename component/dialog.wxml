@@ -1,0 +1,14 @@
+<view class='modal-dialog' wx:if="{{showModal}}">
+  <view class='modal-cover'></view>
+  <view class='modal-confirm'>
+    <view class='modal-conent'>
+      <view class='modal-conent-text1'>借书信息</view>
+      <view class='modal-conent-text2'>书名：{{bookTitle}}</view>
+      <view class='modal-conent-text3'>借书时长：{{borrowTime}}</view>
+    </view>
+    <view class='modal-bottom'>
+      <view class='modal-text1' bindtap='chooseTime'>重新选择时长</view>
+      <view class='modal-text2' bindtap='removeDialog'>确认</view>
+    </view>
+  </view>
+</view>

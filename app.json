@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collect/collect",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/result/result",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "华夏学院图书馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bcc1cc",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#338ffc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "找书",
+        "iconPath": "images/icon/icon-book.png",
+        "selectedIconPath": "images/icon/icon-book-cur.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "收藏",
+        "iconPath": "images/icon/icon-collect.png",
+        "selectedIconPath": "images/icon/icon-collect-cur.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "images/icon/icon-me.png",
+        "selectedIconPath": "images/icon/icon-me-cur.png"
+      }
+    ]
+  }
+}
